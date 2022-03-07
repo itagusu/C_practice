@@ -4,8 +4,8 @@ extern int triangle(int);
 
 int main()
 {
-  triangle(3);
-  triangle(4);
+  //triangle(3);
+  //triangle(4);
   int a;
   printf("好きな数字を入力\n");
   scanf("%d", &a);

@@ -2,7 +2,7 @@
 #include <string.h>
 
 extern int sub();
-extern int sub2(int, int);
+extern int sub2(int);
 extern int sub3(char *);
 
 int main()
@@ -23,10 +23,12 @@ int main()
 
   n = 50;
 
-  // sub2(a, b);
-  printf("%d\n", sub2(a, b));
-  printf("%d\n", sub2(c, d));
-  printf("%d\n", sub2(a, c));
+  sub2(d);
+  printf("%d\n", sub2(d));
+
+  // printf("%d\n", sub2(a, b));
+  // printf("%d\n", sub2(c, d));
+  // printf("%d\n", sub2(a, c));
 
   // sub3
   char ma[10];
@@ -53,11 +55,11 @@ int sub()
   return 0;
 }
 
-int sub2(int x, int y)
+int sub2(int x)
 {
   int z;
 
-  z = x + y;
+  z = (x * x);
   return z;
 }
 
@@ -68,4 +70,3 @@ int sub3(char *matsu)
   printf("%s\n", &matsu[0]);
   return 0;
 }
-
